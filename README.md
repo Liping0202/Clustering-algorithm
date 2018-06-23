@@ -2,32 +2,62 @@
 ========
 
 ****
-### Author:Ping
-### E-mail:2496458210@qq.com
+### Author: Ping
+### E-mail: 2496458210@qq.com
 ****
 ## 目录
 * [chapter01 Kmeans](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmeans)
-	* [Kmeans](#chapter01-kmeans)
+	* [Kmeans](#chapter01_kmeans)
 	* Kmeans算法分析
-* [chapter03](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter03 "跳转到chapter03")
-	* [渐进记号的定义](#渐进记号的定义)
-	* [渐近记号Θ、Ο、Ω、o、ω之间的关系](#渐近记号ΘΟΩoω之间的关系) 
-* [chapter09](https://github.com/Changzhisong/Introduction_to_Algorithms/tree/master/chapter09 "跳转到chapter09")  
+* [chapter02 离群点改进](#chapter02_离群点改进)
+	* [Kmedoids](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmedoids)
+	* [LOF]()
+* [chapter09]()  
 	* 
 ***
 ---
 ___
 
+聚类算法
+-------
+原型聚类又称划分方法，给定一个含n个数据的集合，使用划分方法构建数据的K个分区。大部分划分方法是基于距离的，所以只能发现球类簇。
+普遍采用流行的启发式算法，如K均值和k-中心点算法，渐进的提高聚类质量，逼近局部最优解。其基本特点:发现球状互斥的簇、基于距离、用均值或中心点代表簇的中心、对中小规模数据有效。
+
 chapter01 Kmeans
 -------
 * ### Kmeans 
-	通过构建有序序列，在已经排序的序列中从后面向前扫描，找到相应的位置并插入。
-		换句话说，每次从剩余数组中拎出一个元素，与有序数组从后往前对比，直到插入合
-		适的位置，然后剩余数组缩小规模在循环插入。是一种原址排序算法（类似于抓牌后整理牌）  
-![动画演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter02/Doc/Insertion-sort1.gif)  
-* ### 选择排序【O($n^2$)】  
-	找出数组A中最小的元素并将其与A[0]进行交换，接着，找出A中第二小的元素与A[1]
-		交换。对A中前n-1个元素按该方式交换。  
-![动画演示](https://github.com/Changzhisong/Introduction_to_Algorithms/blob/master/chapter02/Doc/Selection-Sort.gif)  
+      Kmeans算法原理：
+		(1)对于给定的数据集，首先随机选取k个数据作为初始簇中心。
+		(2)遍历数据集，找到距离最近的中心点，加入该簇。
+		(3)求平均值更新k个簇的中心点。
+		(4)重复(2)(3)直到所有的中心点不再发生改变或运行次数达到阈值。
+	算法的时间复杂度为O(nkt),其中n是数据总数，k是簇数，t是迭代次数。
+    
+* ### Kmeans算法分析 
+	(1)不能保证Kmeans算法收敛于全局最优解，常常终止于局部最优解，依赖于初始簇中心的随机选择。  
+	(2)算法需要人工输入参数k的值，k值取值的不同，导致聚类结果的质量不同。  
+	(3)算法的距离计算量为欧几里得距离，将形成球状或者类球状的簇，不能够发现非凸状的簇。  
+	(4)算法对噪声和离群点敏感，异常数据会严重影响聚类结果的质量。  
+	(5)算法的时间复杂度为O(nkt)，对于大数据集，算法是可伸缩的，但是计算量大，效率低下。  
+	(6)标称属性无法计算均值，标称属性无法使用Kmeans算法。  
+	(7)该算法是无监督的学习式聚类方法，当处理有初始类的数据时，需要一种半监督半学习式的处理模式，如果任算法自由运算，聚类结果很可能得不到用户的肯定。  
 
+	接下来的章节将对Kmeans算法进行改进。
+	
 -----
+chapter02 离群点改进
+-------
+* ### Kmedoids 
+Kmeans算法对离群点十分敏感，因为离群点远离大多数数据，当分配到一个簇时，严重扭曲簇的均值。Kmedoids算法
+在进行中心点选择时，不再依靠均值而是考虑用非中心点替换中心点，看是否能够提高聚类质量。 
+
+	Kmedoids算法原理：  
+		(1)对于给定的数据集，首先随机选取k个数据作为初始簇中心。    
+		(2)遍历数据集，找到距离最近的中心点，加入该簇。  
+		(3)各簇中，计算每个数据点距簇内其他数据点的绝度误差和，误差最小的点作为新的中心点。    
+		(4)重复(2)(3)直到新的中心点集与原中心点集相同。    
+	
+Kmeans算法分析：当存在噪声与异常点时，Kmeans算法鲁棒性更好。
+Kmeans算法的时间复杂度为O(k(n-k)^2)，当n和k较大时，计算开销相当大，远高于Kmeans算法。
+ 
+------- 
