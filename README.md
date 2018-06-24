@@ -7,9 +7,9 @@
 ****
 ## 目录
 * [chapter01 Kmeans](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmeans)
-	* [Kmeans](#chapter01_kmeans)
+	* [Kmeans](#chapter01-kmeans)
 	* Kmeans算法分析
-* [chapter02 离群点改进](#chapter02_离群点改进)
+* [chapter02 离群点改进](#chapter02-离群点改进)
 	* [Kmedoids](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmedoids)
 	* [LOF]()
 * [chapter09]()  
