@@ -15,9 +15,9 @@
 * [chapter03 离群点改进](#chapter03-离群点改进)
 	* [局部离群因子检测方法LOF](https://github.com/Liping0202/Clustering-algorithm/tree/master/LOF)
 	* [Kmedoids](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmedoids)
-		* [大型应用聚类 CLARA]()
-		* [基于随机搜索的聚类大型应用 CLARANS]()
-	* [chapter04]()  
+	* [大型应用聚类 CLARA]()
+	* [基于随机搜索的聚类大型应用 CLARANS]()
+* [chapter04 k值选择](#chapter04-k值选择)  
 	* 
 ***
 ---
@@ -127,6 +127,15 @@ CLARA依赖于样本的大小。CLARA目的是在整个数据集上选取K个最
 看看是否能够改善绝对误差。CLARANS进行这样的随机搜索L次。
 L步之后的中心点的集合被看做一个局部最优解。 
 重复上述过程M次，返回最佳局部最优解作为最终的结果。
+
+Kmeans聚类的效果评估方法是SSE，
+是计算所有点到相应簇中心的距离均值，当然，k值越大 
+SSE越小，我们就是要求出随着k值的变化SSE的变化规律，
+找到SSE减幅最小的k值，这时k应该是相对比较合理的值。
+SSE,即所有点到其所属簇中心的距离的平方和即误差的平方和
+
+轮廓系数（silhouette coefficient）方法结合了凝聚度和分离度，
+可以以此来判断聚类的优良性，其值在-1到+1之间取值，值越大表示聚类效果越好
 	
 
 
