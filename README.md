@@ -65,10 +65,11 @@ Kmeans算法对离群点十分敏感，因为离群点远离大多数数据，�
 *  **LOF算法原理：**   
 	(1)对于数据集中每个数据点p，计算数据点p与其他数据点o的欧几里得距离。    
 	(2)对欧几里得距离进行排序，计算该数据的第k距离$k-distance(p)$以及第K领域$N_k(p)$。  
-	(3)计算每个数据的可达距离$reach−distancek(p,o)$及可达密度$lrd_k(p)$。  
-	其中$$reach−distancek(p,o)$=max{$k−distance(o)$,$d(p,o)$}$$，
+	(3)计算每个数据的可达距离$reach−distancek(p,o)$及可达密度$lrd_k(p)$,  
+	其中reach−distancek(p,o)$=max{$k−distance(o)$,$d(p,o)$}，
   	$$lrd_k(p)=\frac{|N_k(p)|}{\sum{o∈N_k(p)} reach-dist_k(p,o)}$$
-	(4)计算每个数据的局部离群点因子。  
+	(4)计算每个数据的局部离群点因子$LOF_k(p)$,
+$$LOF_k(p)=\frac{\sum{o∈N_k(p)} lrd_k(o)}{|N_k(p)| lrd_k(p)}$$	
 	(5)对每个点的局部离群点因子进行排序，输出。  
 	若局部离群因子越接近1，说明p的其邻域点密度差不多，p可能和邻域同属一簇；
 若局部离群因子越小于1，说明p的密度高于其邻域点密度，p为密集点；
