@@ -55,9 +55,9 @@ $$a=|DD|,DD={(x_i,x_j)|λ_i≠λ_j,λ'_i≠λ'_j,i<j)}$$
 内部指标：核心就是类内的距离越小越好，类间距离越大越好。  
 对于聚类结果的簇划分$C$={$C_1$,$C_2$,...,$C_k$}，定义：  
 簇内平均距离：$avg(C)=\frac{2}{|C|(|C|-1)}\sum_{1≤i≤j≤|C|}dist(x_i,x_j)$     
-簇内最远距离  
-簇间最近距离  
-簇间中心距离   
+簇内最远距离: $diam(C)=max_{1≤i≤j≤|C|}dist(x_i,x_j)$    
+簇间最近距离: $dmin(C_i,C_j)=min_{x_i∈C_i,x_j∈C_j}dist(x_i,x_j)$  
+簇间中心距离: $dcen(C_i,C_j)=dist(u_i,u_j)$  
 
 chapter01 Kmeans
 -------
