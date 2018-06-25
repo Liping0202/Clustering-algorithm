@@ -6,14 +6,16 @@
 ### E-mail: 2496458210@qq.com
 ****
 ## 目录
-* [聚类算法的性能度量]
-* [chapter01 Kmeans](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmeans)
-	* [Kmeans](#chapter01-kmeans)
+* [chapter01 聚类算法的性能度量](#chapter01-聚类算法的性能度量)
+	* 聚类算法
+	* 聚类算法的性能度量
+* [chapter02 Kmeans](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmeans)
+	* [Kmeans](#chapter02-kmeans)
 	* Kmeans算法分析
-* [chapter02 离群点改进](#chapter02-离群点改进)
+* [chapter03 离群点改进](#chapter03-离群点改进)
 	* [Kmedoids](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmedoids)
 	* [局部离群因子检测方法LOF](https://github.com/Liping0202/Clustering-algorithm/tree/master/LOF)
-* [chapter03]()  
+* [chapter04]()  
 	* 
 ***
 ---
