@@ -6,13 +6,14 @@
 ### E-mail: 2496458210@qq.com
 ****
 ## 目录
+* [聚类算法的性能度量]
 * [chapter01 Kmeans](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmeans)
 	* [Kmeans](#chapter01-kmeans)
 	* Kmeans算法分析
 * [chapter02 离群点改进](#chapter02-离群点改进)
 	* [Kmedoids](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmedoids)
-	* [局部离群因子检测方法LOF]()
-* [chapter09]()  
+	* [局部离群因子检测方法LOF](https://github.com/Liping0202/Clustering-algorithm/tree/master/LOF)
+* [chapter03]()  
 	* 
 ***
 ---
@@ -22,7 +23,10 @@ ___
 -------
 原型聚类又称划分方法，给定一个含n个数据的集合，使用划分方法构建数据的K个分区。大部分划分方法是基于距离的，所以只能发现球类簇。
 普遍采用流行的启发式算法，如K均值和k-中心点算法，渐进的提高聚类质量，逼近局部最优解。其基本特点:发现球状互斥的簇、基于距离、用均值或中心点代表簇的中心、对中小规模数据有效。
-
+* ### 聚类算法的性能度量
+分类的性能度量方法有很多如准确率，AUC，召回率等等，而聚类的性能度量主要分为
+两种类型，外部指标：将聚类结果与某个“参考模型”进行比较，称为“外部指标”。
+内部指标：直接考察聚类结果而不利用任何参考模型。
 chapter01 Kmeans
 -------
 * ### Kmeans  
@@ -57,7 +61,7 @@ Kmeans算法对离群点十分敏感，因为离群点远离大多数数据，�
 	(3) 各簇中，计算每个数据点距簇内其他数据点的绝度误差和，误差最小的点作为新的中心点。  
 	(4) 重复(2)(3)直到新的中心点集与原中心点集相同。
   	
-*  **Kmeans算法分析：**  当存在噪声与异常点时，Kmeans算法鲁棒性更好。Kmeans算法的时间复杂度为O(k(n-k)^2)，当n和k较大时，计算开销相当大，远高于Kmeans算法。     
+*  **Kmedoids算法分析：**  当存在噪声与异常点时，Kmeans算法鲁棒性更好。Kmeans算法的时间复杂度为O(k(n-k)^2)，当n和k较大时，计算开销相当大，远高于Kmeans算法。     
 	
 -----
 * ### 局部离群因子检测方法LOF  
