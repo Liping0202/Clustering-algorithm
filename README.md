@@ -70,7 +70,7 @@ Dunn指数：$DI=min_{j≠i}\{min_{j≠i}\frac{dmin(C_i,C_j)}{max_{1≤l≤k}dia
 	(3) 哈曼顿距离: p=1    
 无序属性：VDM距离	
 
-chapter01 Kmeans
+chapter02 Kmeans
 -------
 * ### Kmeans  
 	Kmeans算法原理：    
@@ -93,7 +93,7 @@ chapter01 Kmeans
 	接下来的章节将对Kmeans算法进行改进。
 	
 -----
-chapter02 离群点改进
+chapter03 离群点改进
 -----
 * ### 局部离群因子检测方法LOF  
 一种基于距离的异常检测算法LOF通过剔除无效数据和异常数据来对数据进行预处理。
