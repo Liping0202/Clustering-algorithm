@@ -59,15 +59,15 @@ $$a=|DD|,DD={(x_i,x_j)|λ_i≠λ_j,λ'_i≠λ'_j,i<j)}$$
 簇间最近距离: $dmin(C_i,C_j)=min_{x_i∈C_i,x_j∈C_j}dist(x_i,x_j)$  
 簇间中心距离: $dcen(C_i,C_j)=dist(u_i,u_j)$  
 基于以上定义，可以导出聚类性能度量的内部指标：  
-DB指数：$DBI=\frac{1}{k}\sum_{i=1}^{k}max_{j≠i}\frac{avg(C_i)+avg(C_j)}{dcen(u_i,u_j)}$
+DB指数：$DBI=\frac{1}{k}\sum_{i=1}^{k}max_{j≠i}\frac{avg(C_i)+avg(C_j)}{dcen(u_i,u_j)}$    
 Dunn指数：$DI=min_{j≠i}\{min_{j≠i}\frac{dmin(C_i,C_j)}{max_{1≤l≤k}diam(C_j)}\}$  
 
 *  **距离度量：**   
 聚类的相似度是通过距离来度量的，函数$dist()$是一个距离度量。  
 给定样本：$x=\{x_1,x_2,...,x_n\}$,$y=\{y_1,y_2,...,y_n\}$,有序属性（表示确切的值）的距离公式有：  
-	(1) 闵可夫斯基距离: $dist(x,y)=(\sum_{i=1}^{n}|x_i-y_i|^p)^{\frac{1}{p}}$
-	(2) 欧氏距离: p=2  
-	(3) 哈曼顿距离: p=1  
+	(1) 闵可夫斯基距离: $dist(x,y)=(\sum_{i=1}^{n}|x_i-y_i|^p)^{\frac{1}{p}}$  
+	(2) 欧氏距离: p=2    
+	(3) 哈曼顿距离: p=1    
 无序属性：VDM距离	
 
 chapter01 Kmeans
