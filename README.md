@@ -10,13 +10,13 @@
 	* [聚类算法](#chapter01-聚类算法的性能度量)
 	* [聚类算法的性能度量](#chapter01-聚类算法的性能度量)
 * [chapter02 Kmeans](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmeans)
-	* [Kmeans](#chapter02_kmeans)
+	* [Kmeans](#chapter02-kmeans)
 	* Kmeans算法分析
 * [chapter03 离群点改进](#chapter03-离群点改进)
 	* [局部离群因子检测方法LOF](https://github.com/Liping0202/Clustering-algorithm/tree/master/LOF)
 	* [Kmedoids](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmedoids)
-	* [大型应用聚类CLARA](#chapter03-离群点改进-大型应用聚类CLARA)
-	* [基于随机搜索的聚类大型应用CLARANS](#chapter03-基于随机搜索的聚类大型应用CLARANS)
+	* [大型应用聚类CLARA](#chapter03-离群点改进)
+	* [基于随机搜索的聚类大型应用CLARANS](#chapter03-离群点改进)
 * [chapter04 k值选择](#chapter04-k值选择)  
 	* 
 ***
