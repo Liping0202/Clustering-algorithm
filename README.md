@@ -175,12 +175,11 @@ chapter05 初始聚类中心的选择
 
 * ### Canopy算法
 Canopy算法与传统的聚类算法不同，Canopy聚类最大的特点是不需要事先指定k值，虽然
-其聚类精度较低，但在速度上有很大优势，可以先用Canopy聚类对数据进行“粗”聚类得到k值，
+其聚类精度较低，但速度快，可以先用Canopy聚类对数据进行“粗”聚类得到k值，
 然后使用得到的类簇中心点作为KMeans算法初始类簇中心点进行进一步“细”聚类，所以
 使用Canopy+K-means这种形式聚类算法聚类效果良好。  
 *  **Canopy算法原理：**  
-	(1) 将原始数据集List按照一定的规则进行排序，初始距离阈值为T1、T2，
-	且T1>T2(T1、T2的设定根据用户的需要)。  
+	(1) 将原始数据集List按照一定的规则进行排序，初始距离阈值为T1、T2，T1>T2(T1、T2的设定根据用户的需要)。  
 	(2) 在List中随机挑选一个数据点A，使用一个粗糙距离计算方式计算A与List中其他样本
 数据点之间的距离d。
 	(3) 根据(2)得到的距离d，把d小于T1的样本数据点划到一个canopy中，把d小于T2的样本数据点从List中移除。  
@@ -193,8 +192,8 @@ Canopy算法与传统的聚类算法不同，Canopy聚类最大的特点是不�
 各簇间区别不明显；
 当T2过大时，增加强标记数据点的数量，会减少簇个个数；T2过小，会增加簇的个数，
 同时增加计算时间； 
-##### 效果：
-![canopy.py效果图](https://github.com/AlanConstantine/CanopyByPython/raw/master/canopy_1.png) 
+##### Canopy算法的效果图：
+![canopy.py效果图](https://github.com/Liping0202/Clustering-algorithm/blob/master/canopy.png) 
 *  **Kmedoids算法原理：**
 Canopy+K-means算法步骤：   
 Stage1、聚类最耗费计算的地方是计算对象相似性的时候，Canopy Method在第一阶段选择
