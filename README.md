@@ -18,7 +18,18 @@
 	* [大型应用聚类CLARA](#chapter03-离群点改进)
 	* [基于随机搜索的聚类大型应用CLARANS](#chapter03-离群点改进)
 * [chapter04 k值选择](#chapter04-k值选择)  
-	* 
+	* [手肘法]
+* [chapter05 初始聚类中心的选择](#chapter05-初始聚类中心的选择)  
+	* [尽可能远的k个点](#chapter05-初始聚类中心的选择)
+	* [Canopy算法](#chapter05-初始聚类中心的选择)
+* [chapter06 球状簇](#chapter06-球状簇)  
+	* [Kernel-Means](#chapter06-球状簇)
+* [chapter07 标称属性](#chapter07-标称属性)  
+	* [K-modes](#chapter07-标称属性)
+	* [K-原型算法](#chapter07-标称属性)
+* [chapter08 局部收敛性](#chapter08-局部收敛性)  
+	* [改变初始簇中心](#chapter08-局部收敛性)
+	* [二分K-均值聚类算法](#chapter08-局部收敛性)
 ***
 ---
 ___
