@@ -25,8 +25,8 @@
 * [chapter06 球状簇](#chapter06-球状簇)  
 	* [Kernel-Means](#chapter06-球状簇)
 * [chapter07 标称属性](#chapter07-标称属性)  
-	* [K-modes](#chapter07-标称属性)
-	* [K-原型算法](#chapter07-标称属性)
+	* [K-modes算法](#chapter07-标称属性)
+	* [K-prototype算法](#chapter07-标称属性)
 * [chapter08 局部收敛性](#chapter08-局部收敛性)  
 	* [改变初始簇中心](#chapter08-局部收敛性)
 	* [二分K-均值聚类算法](#chapter08-局部收敛性)
@@ -225,7 +225,11 @@ $C_i=[C_{1i},C_{2i},...,C_{Mi}]$。
 簇中心点$C_i$中每个分量更新为簇i中的众数。    
 	(4) 重复(2)(3)，直到各个簇中样本与各自簇中心距离之和不再降低，返回最后的聚类结果。    
 
-* ### K-原型算法  
+* ### K-prototype算法  
+K-Prototype算法是处理混合属性聚类的典型算法，结合K-Means与K-modes算法。
+针对混合属性的聚类方法，数值属性采用K-means方法得到P1，分类属性采用K-modes
+方法P2，那么聚类方法D=P1+a*P2，a是权重。若分类属性重要，则增加a，否则减少a。
+另外，更新一个簇的中心的方法是结合K-Means与K-modes的更新。
 
 
 
