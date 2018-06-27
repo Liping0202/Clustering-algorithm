@@ -20,8 +20,8 @@
 * [chapter04 k值选择](#chapter04-k值选择)  
 	* [手肘法](#chapter04-k值选择)
 * [chapter05 初始聚类中心的选择](#chapter05-初始聚类中心的选择)  
-	* 尽可能远的k个点
-	* [Canopy算法](#chapter05-初始聚类中心的选择)
+	* [尽可能远的k个点](#chapter05-初始聚类中心的选择) 
+	* [Canopy算法](https://github.com/Liping0202/Clustering-algorithm/tree/master/canopy)
 * [chapter06 球状簇](#chapter06-球状簇)  
 	* [Kernel-Means](#chapter06-球状簇)
 * [chapter07 标称属性](#chapter07-标称属性)  
@@ -169,7 +169,7 @@ SSE,即所有点到其所属簇中心的距离的平方和即误差的平方和
 -----
 chapter05 初始聚类中心的选择
 -------
-* ### 尽可能远的k个点(#chapter05-初始聚类中心的选择)  	
+* ### 尽可能远的k个点 	
 	首先随机选择一个点作为第一个初始类簇中心点，然后选择距离该点最远的那个点作为
 第二个初始类簇中心点，然后再选择距离前两个点的最近距离最大的点作为第三个初始类簇
 的中心点，以此类推，直至选出K个初始类簇中心点。  
