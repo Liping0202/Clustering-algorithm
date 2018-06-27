@@ -3,29 +3,20 @@ package canopy;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.text.DecimalFormat;
+import java.io.BufferedReader;  
+import java.io.FileNotFoundException;  
+import java.io.FileReader;  
+import java.io.IOException;  
 
 public class CanopyBuilder {
 	private double T1 = 8;
 	private double T2 = 4;
-	private ArrayList<Point> points = null;
-	private ArrayList<Canopy> canopies = null;
+	private ArrayList<Point> points=new ArrayList<Point>();
+	private ArrayList<Canopy> canopies= new ArrayList<Canopy>();;
 	DecimalFormat df=new DecimalFormat("#.####");
-	public CanopyBuilder() {//构造函数
-		init();
+	public CanopyBuilder(ArrayList<Point> points) {//构造函数
+			this.points=points;
 	}
-	public void init() {
-		points = new ArrayList<Point>();
-		points.add(new Point(8.1, 8.1));
-		points.add(new Point(7.1, 7.1));
-		points.add(new Point(6.2, 6.2));
-		points.add(new Point(7.1, 7.1));
-		points.add(new Point(2.1, 2.1));
-		points.add(new Point(1.1, 1.1));
-		points.add(new Point(0.1, 0.1));
-		points.add(new Point(3.0, 3.0));
-		canopies = new ArrayList<Canopy>();
-	}	
-	
 	public void run() {
 		while (points.size() > 0) {
 			Iterator<Point> iterator = points.iterator();
@@ -53,7 +44,8 @@ public class CanopyBuilder {
 						current.setMark(Point.MARK_WEAK);
 						canopy.getPoints().add(current);
 					} else if (d > T1) {
-						index++;
+						index++;//每次canopy遍历循环之前index归零，current到一个canopy的center距离大于T1时，
+						        //则index++，如果index=canopy的个数，说明该点current到所有canopy的距离均大于T1，生成新的canopy
 					} 
 					//距离小于T2则从列表中移除，打上强标记
 					if (d <= T2) {
@@ -94,7 +86,31 @@ public class CanopyBuilder {
 		}
 	
 	public static void main(String[] args) {
-		CanopyBuilder builder = new CanopyBuilder();
+		ArrayList<Point> arr = new ArrayList<>();      
+        arr=new Readpoint().read("F:\\\\.eclipse\\\\JAVA\\\\src\\\\canopy\\\\data3.txt");  
+		CanopyBuilder builder = new CanopyBuilder(arr);
 		builder.run();
 	}
+}
+class Readpoint{  
+    //从文件中读取数据  
+public ArrayList<Point> read(String fileName){  
+    ArrayList<Point> arr=new ArrayList<>();  
+    try {  
+        BufferedReader reader = new BufferedReader(new FileReader(fileName));  
+        String line = null; 
+        int i=0;
+        while((line=reader.readLine())!=null){ 
+            String str[] = line.split("\\s+");    
+            double x=Double.parseDouble(str[0].trim());  
+            double y=Double.parseDouble(str[1].trim());  
+            arr.add(new Point(x,y));
+        }  
+    }catch (FileNotFoundException e) {  
+        e.printStackTrace();  
+    }catch (IOException e) {  
+        e.printStackTrace();  
+    }       
+    return arr;        
+    }  
 }
