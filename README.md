@@ -29,7 +29,7 @@
 	* [K-prototype算法](#chapter07-标称属性)
 * [chapter08 局部收敛性](#chapter08-局部收敛性)  
 	* [改变初始簇中心](#chapter08-局部收敛性)
-	* [二分K-均值聚类算法](#chapter08-局部收敛性)
+	* [二分K-均值聚类算法](https://github.com/Liping0202/Clustering-algorithm/tree/master/BisectingKmeans)
 ***
 ---
 ___
