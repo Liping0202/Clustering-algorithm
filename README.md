@@ -95,7 +95,7 @@ chapter02 Kmeans
 	
 	算法的时间复杂度为O(nkt),其中n是数据总数，k是簇数，t是迭代次数。
 ##### Kmeans算法的效果图：
-![Kmeans效果图](https://github.com/Liping0202/Clustering-algorithm/blob/master/canopy.png) 
+![Kmeans效果图](https://github.com/Liping0202/Clustering-algorithm/blob/master/640.gif) 
 
     
 * ### Kmeans算法分析 
