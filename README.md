@@ -172,7 +172,8 @@ SSE是所有样本的聚类误差，代表了聚类效果的好坏。
 然后随着k值的继续增大而趋于平缓，也就是说SSE和k的关系图是一个手肘的形状，
 而这个肘部对应的k值就是数据的最合适的聚类数k。
 ##### k与SSE的关系图：
-![手肘法](https://github.com/Liping0202/Clustering-algorithm/blob/master/k.png) 
+![手肘法](https://github.com/Liping0202/Clustering-algorithm/blob/master/k.png)  
+ 
 肘部对于的k值为4，故对于这个数据集的聚类而言，最佳聚类数应该选4。
 
 
