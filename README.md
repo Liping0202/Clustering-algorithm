@@ -11,7 +11,7 @@
 	* [聚类算法的性能度量](#chapter01-聚类算法的性能度量)
 * [chapter02 划分聚类法](#chapter02-划分聚类法)
 	* [section01 Kmeans](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmeans)
-		* [Kmeans](#section01-Kmeans)
+		* [Kmeans](#chapter02-划分聚类法-section01-Kmeans)
 		* Kmeans算法分析
 	* [section02 离群点改进](#section02-离群点改进)
 		* [局部离群因子检测方法LOF](https://github.com/Liping0202/Clustering-algorithm/tree/master/LOF)
