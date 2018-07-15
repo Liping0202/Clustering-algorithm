@@ -340,8 +340,8 @@ chapter09 层次聚类法
 $|C_i|$表示簇i内数据点的个数；$EC(C_i)$表示簇i内所有边的权重和；
 $EC(C_i,C_j)$表示跨越两个簇的所有边的权重和.   
 合并过程算法：  
-1、给定度量函数如下minMetric,
-2、访问每个簇，计算他与邻近的每个簇的RC和RI，通过度量函数公式计算出值tempMetric。  
+1、给定度量函数如下minMetric。  
+2、访问每个簇，计算他与邻近的每个簇的RC和RI，通过度量函数公式计算出值tempMetric。    
 3、找到最大的tempMetric,如果最大的tempMetric超过阈值minMetric，
 将簇与此值对应的簇合并。  
 4、如果找到的最大的tempMetric没有超过阈值，则表明此聚簇已合并完成，
