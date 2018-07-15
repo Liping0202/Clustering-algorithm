@@ -30,6 +30,13 @@
 * [chapter08 局部收敛性](#chapter08-局部收敛性)  
 	* [改变初始簇中心](#chapter08-局部收敛性)
 	* [二分K-均值聚类算法](https://github.com/Liping0202/Clustering-algorithm/tree/master/BisectingKmeans)
+* [chapter09 层次聚类法](#chapter09-层次聚类法)  
+	* [凝聚层次聚类方法](#chapter09-层次聚类法)
+	* [分类层次聚类方法](#chapter09-层次聚类法)
+* [chapter10 密度聚类法](#chapter10-密度聚类法)  
+	* [改变初始簇中心]
+	* [二分K-均值聚类算法] 
+	
 ***
 ---
 ___
