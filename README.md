@@ -11,7 +11,7 @@
 	* [聚类算法的性能度量](#chapter01-聚类算法的性能度量)
 * [chapter02 划分聚类法](#chapter02-划分聚类法)
 	* [section01 Kmeans](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmeans)
-		* [Kmeans](#chapter02-划分聚类法-section01-Kmeans)
+		* [Kmeans](#section01-Kmeans)
 		* Kmeans算法分析
 	* [section02 离群点改进](#section02-离群点改进)
 		* [局部离群因子检测方法LOF](https://github.com/Liping0202/Clustering-algorithm/tree/master/LOF)
@@ -88,7 +88,7 @@ Dunn指数是比较样本簇之间聚合度大小，簇间距离越大越好。
 无序属性：VDM距离
 
 -----
-chapter02 Kmeans
+section01 Kmeans
 -------
 * ### Kmeans  
 	Kmeans算法原理：    
