@@ -9,14 +9,15 @@
 * [chapter01 聚类算法的性能度量](#chapter01-聚类算法的性能度量)
 	* [聚类算法](#chapter01-聚类算法的性能度量)
 	* [聚类算法的性能度量](#chapter01-聚类算法的性能度量)
-* [chapter02 Kmeans](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmeans)
-	* [Kmeans](#chapter02-kmeans)
-	* Kmeans算法分析
-* [chapter03 离群点改进](#chapter03-离群点改进)
-	* [局部离群因子检测方法LOF](https://github.com/Liping0202/Clustering-algorithm/tree/master/LOF)
-	* [Kmedoids](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmedoids)
-	* [大型应用聚类CLARA](#chapter03-离群点改进)
-	* [基于随机搜索的聚类大型应用CLARANS](#chapter03-离群点改进)
+* [chapter02 划分聚类法](#chapter02-划分聚类法)
+	* [section01 Kmeans](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmeans)
+		* [Kmeans](#chapter02-kmeans)
+		* Kmeans算法分析
+	* [section02 离群点改进](#chapter03-离群点改进)
+		* [局部离群因子检测方法LOF](https://github.com/Liping0202/Clustering-algorithm/tree/master/LOF)
+		* [Kmedoids](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmedoids)
+		* [大型应用聚类CLARA](#chapter03-离群点改进)
+		* [基于随机搜索的聚类大型应用CLARANS](#chapter03-离群点改进)
 * [chapter04 k值选择](#chapter04-k值选择)  
 	* [手肘法](#chapter04-k值选择)
 * [chapter05 初始聚类中心的选择](#chapter05-初始聚类中心的选择)  
@@ -39,8 +40,8 @@ chapter01 聚类算法的性能度量
 * ### 聚类算法  
 聚类算法是将数据集中的样本划分为若干个不相交的子集，每个子集即为一个簇，
 可用于寻找数据内在的分布结构，也可作为其它学习任务的前驱过程，来提炼数据。
+聚类算法包含很多种，分为划分法、密度法、层次法、图论聚类算法、模型算法等。  
 
-聚类算法包含很多种，分为划分法、密度法、层次法、图论聚类算法、模型算法等。本项目主要研究的是划分法，
 划分方法又称原型聚类，给定一个含n个数据的集合，使用划分方法构建数据的K个分区。大部分划分方法是基于距离的，所以只能发现球类簇。
 普遍采用流行的启发式算法，如K均值和k-中心点算法，渐进的提高聚类质量，逼近局部最优解。其基本特点:发现球状互斥的簇、基于距离、用均值或中心点代表簇的中心、对中小规模数据有效。
 * ### 聚类算法的性能度量  
@@ -289,6 +290,17 @@ $B_i=[C_{i1},C_{i2}]$，其中$C_{i1}$和$C_{i2}$为每一次二分试验得到�
 	(3) 计算集合B中每一个划分方法得到的2个簇的总SSE值，选择具有最小总SSE的二分方法得到的结果：$B_j=[C_{i1},C_{i2}]$，
 	并将簇$C_{j1}$、$C_{j2}$加入到集合$C$，并将$C_p$从$C$中移除。  
 	(4) 重复(2)(3)，直到得到k个簇。
+	
+
+层次聚类试图在不同层次上对数据集进行划分，从而形成树形的聚类结构，
+数据集的划分可采用“自底向上”的聚合策略，也可以采用“自顶向下”的分拆策略。
+即层次聚类可以是凝聚的也可以是分裂的。凝聚的层次聚类方法使用自底向上的策略。
+即刚开始每个点都认为是一个簇，然后在迭代过程中，不断的合并直到满足某种条件。
+在合并步骤中，它找出最相近的簇（“最相近”的衡量标准可以子集设定），
+并且合并他们，形成一个簇。
+分裂的层次聚类方法使用自顶向下的策略，即把所有的对象都放到一个簇中开始。
+不断向下划分，直到满足某种设定的条件。
+
 
 
 
