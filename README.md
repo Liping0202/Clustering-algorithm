@@ -9,29 +9,27 @@
 * [chapter01 聚类算法的性能度量](#chapter01-聚类算法的性能度量)
 	* [聚类算法](#chapter01-聚类算法的性能度量)
 	* [聚类算法的性能度量](#chapter01-聚类算法的性能度量)
-* [chapter02 划分聚类法](#chapter02-划分聚类法)
-* [section21 Kmeans](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmeans)
-	* [Kmeans](#section01-Kmeans)
+* [chapter02 Kmeans](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmeans)
+	* [Kmeans](#chapter02-kmeans)
 	* Kmeans算法分析
-* [section22 离群点改进](#section02-离群点改进)
+* [chapter03 离群点改进](#chapter03-离群点改进)
 	* [局部离群因子检测方法LOF](https://github.com/Liping0202/Clustering-algorithm/tree/master/LOF)
 	* [Kmedoids](https://github.com/Liping0202/Clustering-algorithm/tree/master/Kmedoids)
 	* [大型应用聚类CLARA](#chapter03-离群点改进)
 	* [基于随机搜索的聚类大型应用CLARANS](#chapter03-离群点改进)
-* [section23 k值选择](#chapter04-k值选择)  
+* [chapter04 k值选择](#chapter04-k值选择)  
 	* [手肘法](#chapter04-k值选择)
-	* [轮廓系数法](#chapter04-k值选择)
-* [section24 初始聚类中心的选择](#chapter05-初始聚类中心的选择)  
+* [chapter05 初始聚类中心的选择](#chapter05-初始聚类中心的选择)  
 	* [尽可能远的k个点](#chapter05-初始聚类中心的选择) 
 	* [Canopy算法](https://github.com/Liping0202/Clustering-algorithm/tree/master/canopy)
-	* [chapter06 球状簇](#chapter06-球状簇)  
-		* [Kernel-Means](#chapter06-球状簇)
-	* [chapter07 标称属性](#chapter07-标称属性)  
-		* [K-modes算法](#chapter07-标称属性)
-		* [K-prototype算法](#chapter07-标称属性)
-	* [chapter08 局部收敛性](#chapter08-局部收敛性)  
-		* [改变初始簇中心](#chapter08-局部收敛性)
-		* [二分K-均值聚类算法](https://github.com/Liping0202/Clustering-algorithm/tree/master/BisectingKmeans)
+* [chapter06 球状簇](#chapter06-球状簇)  
+	* [Kernel-Means](#chapter06-球状簇)
+* [chapter07 标称属性](#chapter07-标称属性)  
+	* [K-modes算法](#chapter07-标称属性)
+	* [K-prototype算法](#chapter07-标称属性)
+* [chapter08 局部收敛性](#chapter08-局部收敛性)  
+	* [改变初始簇中心](#chapter08-局部收敛性)
+	* [二分K-均值聚类算法](https://github.com/Liping0202/Clustering-algorithm/tree/master/BisectingKmeans)
 ***
 ---
 ___
@@ -88,7 +86,7 @@ Dunn指数是比较样本簇之间聚合度大小，簇间距离越大越好。
 无序属性：VDM距离
 
 -----
-section01 Kmeans
+chapter02 Kmeans
 -------
 * ### Kmeans  
 	Kmeans算法原理：    
@@ -300,7 +298,7 @@ $B_i=[C_{i1},C_{i2}]$，其中$C_{i1}$和$C_{i2}$为每一次二分试验得到�
 在合并步骤中，它找出最相近的簇（“最相近”的衡量标准可以子集设定），
 并且合并他们，形成一个簇。
 分裂的层次聚类方法使用自顶向下的策略，即把所有的对象都放到一个簇中开始。
-不断向下划分，直到满足某种设定的条件。
+	不断向下划分，直到满足某种设定的条件。
 
 
 
