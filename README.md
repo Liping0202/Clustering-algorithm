@@ -352,9 +352,9 @@ AGNES算法是凝聚的层次聚类算法，如果簇C1中的一个数据点和�
 (2)在所有簇中挑选出具有最大直径(簇中两点之间的最大距离)的簇。  
 (3)找出所挑出簇里与其他点平均相异度最大的一个点放入splinter group，
 剩余的放入old group中。   
-(4)在old group里找出到splinter group中点的最近距离不大于old group中点的最近距离的点，并将该点加入splinter group。    
+(4)在old group里找出到splinter group中点的最近距离不大于old group中点的最近距离的点，并将该点加入splinter group。  
 (5)重复步骤(4)直到没有新的old group的点被分配给splinter group。  
-(6)Splinter group 和old group为被选中的簇分裂成的两个簇，与其他簇一起组成新的簇集合。
+(6)Splinter group 和old group为被选中的簇分裂成的两个簇，与其他簇一起组成新的簇集合。  
 (7)重复步骤(2)-(6),直到类簇的数目达到k。  
 算法性能分析：  
 缺点是已做的分裂操作不能撤销，类之间不能交换对象。如果在某步没有选择好分裂点，可能会导致低质量的聚类结果。大数据集不太适用。
