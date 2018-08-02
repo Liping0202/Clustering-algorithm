@@ -32,7 +32,7 @@
 	* [二分K-均值聚类算法](https://github.com/Liping0202/Clustering-algorithm/tree/master/BisectingKmeans)
 * [chapter09 层次聚类法](#chapter09-层次聚类法)  
 	* [层次聚类方法](#chapter09-层次聚类法)
-	* [传统的层次聚类方法 AGNES算法、DIANA算法](https://github.com/Liping0202/Clustering-algorithm/tree/master/agnes)
+	* [传统的层次聚类方法 AGNES算法、DIANA算法](https://github.com/Liping0202/Clustering-algorithm/tree/master/BisectingKmeans)
 	* [改进的层次聚类算法](#chapter09-层次聚类法)
 * [chapter10 密度聚类法](#chapter10-密度聚类法)  
 	* [密度聚类法](#chapter10-密度聚类法)
