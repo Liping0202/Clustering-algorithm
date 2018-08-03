@@ -33,7 +33,7 @@
 * [chapter09 层次聚类法](#chapter09-层次聚类法)  
 	* [层次聚类方法](#chapter09-层次聚类法)
 	* [传统的层次聚类方法 AGNES算法、DIANA算法](https://github.com/Liping0202/Clustering-algorithm/tree/master/agnes)
-	* [改进的层次聚类算法](#chapter09-层次聚类法)
+	* [改进的层次聚类算法](https://github.com/Liping0202/Clustering-algorithm/tree/master/CHAMELEON)
 * [chapter10 密度聚类法](#chapter10-密度聚类法)  
 	* [密度聚类法](#chapter10-密度聚类法)
 	* [Optics算法](#chapter10-密度聚类法)
