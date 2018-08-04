@@ -457,7 +457,7 @@ OPTICS算法可以获得不同密度的聚类。因为OPTICS算法输出的是�
 (2)如果该点的核心距离大于给定半径r，则该点为噪声，可以忽略，否则该点属于新的聚类，
 跳至步骤(1)，结果队列遍历结束，则算法结束。
 ##### 聚类流程图：
-![聚类流程图](https://github.com/Liping0202/Clustering-algorithm/blob/master/Optics.png) 
+![聚类流程图](https://github.com/Liping0202/Clustering-algorithm/blob/master/Opticsjulei.png) 
 
 在Optics中需要输入参数r和MinPts，这里的r和MinPts只是起到算法辅助的作用，两个参数的细微
 变化不会影响到样本点的相对输出顺序，对我们的聚类结果的分析没有任何影响。所以说，Optics
